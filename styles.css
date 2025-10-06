@@ -190,19 +190,19 @@ a {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: var(--spacing-md);
-    letter-spacing: -0.02em;
-    font-style: italic;
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.03em;
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-lg);
-    font-weight: 400;
+    font-weight: 500;
+    font-family: var(--font-mono);
 }
 
 .btn-primary {
@@ -216,7 +216,7 @@ a {
     text-transform: uppercase;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid var(--color-green);
-    border-radius: 6px;
+    border-radius: 100px;
     position: relative;
     overflow: hidden;
 }
@@ -282,6 +282,7 @@ a {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1;
+    border-radius: 24px;
 }
 
 .grid-large {
@@ -394,8 +395,8 @@ a {
 
 .section-header h2 {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 600;
-    line-height: 1.1;
+    font-weight: 700;
+    line-height: 1;
     letter-spacing: -0.01em;
 }
 
@@ -419,7 +420,7 @@ a {
 .coffee-card {
     background: rgba(255, 255, 255, 0.05);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
     border: 2px solid rgba(255, 255, 255, 0.1);
@@ -485,7 +486,7 @@ a {
     background: var(--color-yellow);
     display: inline-block;
     padding: 0.35rem 0.75rem;
-    border-radius: 6px;
+    border-radius: 100px;
     margin-bottom: var(--spacing-sm);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -564,7 +565,7 @@ a {
     border: 1px solid var(--color-border);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: white;
-    border-radius: 8px;
+    border-radius: 16px;
     position: relative;
     overflow: hidden;
 }
@@ -628,7 +629,7 @@ a {
     padding-right: 0.5rem;
     margin-left: -0.5rem;
     margin-right: -0.5rem;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .price-option .size {
@@ -703,7 +704,7 @@ a {
 .testimonial-card {
     background: rgba(250, 248, 245, 0.05);
     padding: var(--spacing-lg);
-    border-radius: 4px;
+    border-radius: 16px;
     border: 1px solid rgba(250, 248, 245, 0.1);
     transition: all 0.3s ease;
 }
