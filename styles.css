@@ -155,6 +155,22 @@ a {
     animation: fadeInVideo 1.5s ease-in forwards;
 }
 
+.hero-video::-webkit-media-controls {
+    display: none !important;
+}
+
+.hero-video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
+.hero-video::-webkit-media-controls-play-button {
+    display: none !important;
+}
+
+.hero-video::-webkit-media-controls-panel {
+    display: none !important;
+}
+
 @keyframes fadeInVideo {
     to { opacity: 1; }
 }

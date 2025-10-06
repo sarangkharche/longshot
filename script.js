@@ -21,28 +21,45 @@ const updateTodayHours = () => {
 updateTodayHours();
 
 // Force video autoplay and setup
-window.addEventListener('DOMContentLoaded', () => {
+const initVideo = () => {
     const heroVideo = document.querySelector('.hero-video');
-    if (heroVideo) {
-        heroVideo.muted = true;
-        heroVideo.playbackRate = 0.5;
+    if (!heroVideo) return;
 
+    heroVideo.muted = true;
+    heroVideo.playbackRate = 0.5;
+
+    // Try to play immediately
+    const attemptPlay = () => {
         const playPromise = heroVideo.play();
 
         if (playPromise !== undefined) {
-            playPromise.then(() => {
-                // Autoplay started
-            }).catch(error => {
-                // Try on first touch/click
-                const playOnInteraction = () => {
-                    heroVideo.play();
-                };
-                document.addEventListener('touchstart', playOnInteraction, { once: true });
-                document.addEventListener('click', playOnInteraction, { once: true });
+            playPromise.catch(() => {
+                // Autoplay blocked, video will show controls
             });
         }
-    }
-});
+    };
+
+    // Try multiple times for better mobile compatibility
+    attemptPlay();
+
+    // Also try after a short delay
+    setTimeout(attemptPlay, 100);
+
+    // And try on user interaction as fallback
+    const playOnInteraction = () => {
+        heroVideo.play();
+    };
+    document.addEventListener('touchstart', playOnInteraction, { once: true });
+    document.addEventListener('click', playOnInteraction, { once: true });
+};
+
+// Run on different load events for maximum compatibility
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initVideo);
+} else {
+    initVideo();
+}
+window.addEventListener('load', initVideo);
 
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
