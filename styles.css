@@ -187,6 +187,9 @@ a {
     z-index: 1;
     max-width: 900px;
     padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-title {
