@@ -200,7 +200,7 @@ a {
 .hero-subtitle {
     font-size: clamp(1rem, 2.2vw, 1.35rem);
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     font-weight: 300;
     font-family: var(--font-sans);
     letter-spacing: 0.02em;
@@ -210,7 +210,7 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    margin: var(--spacing-md) auto 0;
+    margin: 0 auto var(--spacing-md);
     padding: 0.5rem 1rem;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
