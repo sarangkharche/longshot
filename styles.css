@@ -10,9 +10,11 @@
     --color-cream: #f5f1eb;
     --color-text: #2d2420;
     --color-text-secondary: #6b5d52;
+    --color-olive: #9fa157;
+    --color-navy: #2c4a6b;
+    --color-teal: #4a7c7e;
     --color-accent: #d4955b;
     --color-accent-dark: #b87a43;
-    --color-terracotta: #c17856;
     --color-border: #e8dfd5;
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -92,7 +94,7 @@ a {
 }
 
 .logo:hover {
-    color: var(--color-accent);
+    color: var(--color-navy);
 }
 
 .nav-menu {
@@ -160,7 +162,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 50%, rgba(212, 149, 91, 0.08), transparent 60%);
+    background: radial-gradient(circle at 30% 50%, rgba(74, 124, 126, 0.08), transparent 60%);
     pointer-events: none;
 }
 
@@ -295,7 +297,7 @@ a {
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-accent);
+    color: var(--color-navy);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -389,7 +391,7 @@ a {
 
 .coffee-notes {
     font-size: 0.85rem;
-    color: var(--color-accent);
+    color: var(--color-olive);
     margin-bottom: var(--spacing-sm);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -475,15 +477,15 @@ a {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-accent), var(--color-terracotta));
+    background: linear-gradient(90deg, var(--color-navy), var(--color-teal), var(--color-olive));
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
 
 .menu-item:hover {
-    border-color: var(--color-accent);
+    border-color: var(--color-teal);
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(212, 149, 91, 0.12);
+    box-shadow: 0 8px 20px rgba(74, 124, 126, 0.15);
 }
 
 .menu-item:hover::before {
@@ -504,7 +506,7 @@ a {
 .menu-item span {
     font-size: 1.25rem;
     font-weight: 500;
-    color: var(--color-accent);
+    color: var(--color-navy);
     font-family: var(--font-mono);
 }
 
@@ -537,7 +539,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: var(--spacing-xs);
-    color: var(--color-accent);
+    color: var(--color-olive);
 }
 
 .contact-item p {
