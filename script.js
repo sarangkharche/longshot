@@ -129,3 +129,33 @@ const createScrollProgress = () => {
 
 // Uncomment to enable scroll progress indicator
 // createScrollProgress();
+
+// Smooth video loop transition
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo) {
+    // Slow down video playback to 50% speed (half speed)
+    heroVideo.playbackRate = 0.5;
+
+    // Add transition for smooth fade
+    heroVideo.style.transition = 'opacity 0.8s ease-in-out';
+
+    // Start fade before video ends
+    heroVideo.addEventListener('timeupdate', function() {
+        const timeLeft = this.duration - this.currentTime;
+
+        // Fade out 0.8 seconds before end
+        if (timeLeft <= 0.8 && timeLeft > 0.7) {
+            this.style.opacity = '0.3';
+        }
+    });
+
+    // Reset and fade back in when looping
+    heroVideo.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+        // Small delay then fade back in
+        setTimeout(() => {
+            this.style.opacity = '1';
+        }, 50);
+    });
+}
