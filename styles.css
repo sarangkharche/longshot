@@ -258,7 +258,7 @@ a {
 /* Featured Grid */
 .featured-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: var(--spacing-xl) var(--spacing-md);
     max-width: 1600px;
@@ -273,7 +273,8 @@ a {
 }
 
 .grid-large {
-    grid-column: span 2;
+    grid-column: 1 / -1;
+    aspect-ratio: 2 / 1;
 }
 
 .grid-item img {
