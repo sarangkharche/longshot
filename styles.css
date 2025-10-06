@@ -87,13 +87,6 @@ a {
     position: relative;
 }
 
-.logo::after {
-    content: '☕';
-    font-size: 0.9rem;
-    margin-left: 0.5rem;
-    opacity: 0.7;
-}
-
 .logo:hover {
     color: var(--color-green);
 }
@@ -229,11 +222,11 @@ a {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-size: clamp(3rem, 8vw, 7rem);
     font-weight: 700;
-    line-height: 1;
+    line-height: 0.95;
     margin-bottom: var(--spacing-sm);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
 }
 
 .hero-subtitle {
@@ -313,8 +306,10 @@ a {
 .featured-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    padding: var(--spacing-md) 0;
+    gap: 1.5rem;
+    padding: var(--spacing-xl) var(--spacing-md);
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .grid-item {
@@ -433,10 +428,10 @@ a {
 }
 
 .section-header h2 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(3rem, 7vw, 6rem);
     font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.01em;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
 }
 
 .section-subtitle {
@@ -512,11 +507,11 @@ a {
 }
 
 .coffee-info h3 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
     color: white;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
 }
 
 .coffee-notes {
@@ -636,10 +631,10 @@ a {
 }
 
 .menu-item h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 700;
     margin-bottom: 0;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     color: var(--color-dark);
 }
 
