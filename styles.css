@@ -535,16 +535,79 @@ a {
     font-family: var(--font-mono);
 }
 
+/* Menu Intro */
+.menu-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-text);
+    color: var(--color-bg);
+}
+
+.testimonials .section-label {
+    color: var(--color-olive);
+}
+
+.testimonials h2 {
+    color: var(--color-bg);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.testimonial-card {
+    background: rgba(250, 248, 245, 0.05);
+    padding: var(--spacing-lg);
+    border-radius: 4px;
+    border: 1px solid rgba(250, 248, 245, 0.1);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    background: rgba(250, 248, 245, 0.08);
+    border-color: var(--color-teal);
+    transform: translateY(-4px);
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-size: 0.9rem;
+    color: var(--color-olive);
+    font-weight: 500;
+}
+
 /* Contact Section */
 .contact {
     padding: var(--spacing-xl) 0;
     background: var(--color-cream);
 }
 
+.section-header.centered {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .contact-info h2 {
@@ -554,9 +617,10 @@ a {
 }
 
 .contact-details {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--spacing-lg);
+    margin-top: var(--spacing-md);
 }
 
 .contact-item h4 {
@@ -572,16 +636,6 @@ a {
     color: var(--color-text-secondary);
 }
 
-.contact-map {
-    border-radius: 2px;
-    overflow: hidden;
-}
-
-.contact-map img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 /* Footer */
 .footer {
