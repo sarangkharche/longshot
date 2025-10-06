@@ -25,32 +25,49 @@ const initVideo = () => {
     const heroVideo = document.querySelector('.hero-video');
     if (!heroVideo) return;
 
+    // Explicitly disable controls
+    heroVideo.controls = false;
+    heroVideo.removeAttribute('controls');
     heroVideo.muted = true;
     heroVideo.playbackRate = 0.5;
+    heroVideo.defaultMuted = true;
+    heroVideo.autoplay = true;
+    heroVideo.playsInline = true;
 
     // Try to play immediately
     const attemptPlay = () => {
+        heroVideo.muted = true; // Ensure muted before each play attempt
         const playPromise = heroVideo.play();
 
         if (playPromise !== undefined) {
-            playPromise.catch(() => {
-                // Autoplay blocked, video will show controls
+            playPromise.then(() => {
+                // Success - ensure controls stay hidden
+                heroVideo.controls = false;
+            }).catch(() => {
+                // Autoplay blocked, try again with user interaction
+                heroVideo.controls = false;
             });
         }
     };
 
     // Try multiple times for better mobile compatibility
     attemptPlay();
-
-    // Also try after a short delay
     setTimeout(attemptPlay, 100);
+    setTimeout(attemptPlay, 500);
 
-    // And try on user interaction as fallback
+    // And try on any user interaction as fallback
     const playOnInteraction = () => {
-        heroVideo.play();
+        heroVideo.controls = false;
+        heroVideo.muted = true;
+        heroVideo.play().then(() => {
+            heroVideo.controls = false;
+        });
+        document.removeEventListener('scroll', playOnInteraction);
     };
+
     document.addEventListener('touchstart', playOnInteraction, { once: true });
     document.addEventListener('click', playOnInteraction, { once: true });
+    document.addEventListener('scroll', playOnInteraction, { once: true });
 };
 
 // Run on different load events for maximum compatibility
