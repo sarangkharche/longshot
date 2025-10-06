@@ -310,15 +310,15 @@ a {
 
 /* About Section */
 .about {
-    padding: var(--spacing-xl) 0;
     background: white;
 }
 
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
-    align-items: center;
+    gap: 0;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .section-label {
@@ -331,30 +331,46 @@ a {
     font-weight: 600;
 }
 
+.about-text {
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .about-text h2 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 500;
-    line-height: 1.15;
+    line-height: 1.2;
     margin-bottom: var(--spacing-md);
     letter-spacing: -0.01em;
+    color: var(--color-dark);
 }
 
 .about-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    max-width: 540px;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
 }
 
 .about-image {
-    border-radius: 20px;
-    overflow: hidden;
+    padding: var(--spacing-xl);
+    display: flex;
+    align-items: center;
 }
 
 .about-image img {
     width: 100%;
-    height: 600px;
+    height: auto;
     object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* Coffee Collection */
@@ -871,8 +887,12 @@ a {
         grid-template-columns: 1fr;
     }
 
-    .about-image img {
-        height: 400px;
+    .about-text {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .about-image {
+        padding: 0 var(--spacing-md) var(--spacing-lg);
     }
 
     .experience-content {
