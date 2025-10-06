@@ -255,6 +255,70 @@ a {
     animation: scrollDown 2s ease infinite;
 }
 
+/* Opening Hours */
+.opening-hours {
+    padding: var(--spacing-lg) var(--spacing-md);
+    background: white;
+}
+
+.hours-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hours-label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-warm-gray);
+    margin-bottom: var(--spacing-md);
+    font-weight: 400;
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.hours-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--color-bg);
+    border-radius: 12px;
+    transition: opacity 0.3s ease;
+}
+
+.hours-time:hover {
+    opacity: 0.7;
+}
+
+.hours-days {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: 0.02em;
+}
+
+.hours-range {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--color-text-secondary);
+    font-family: var(--font-mono);
+}
+
+.hours-closed {
+    opacity: 0.5;
+}
+
+.hours-closed .hours-range {
+    font-style: italic;
+}
+
 /* Featured Grid */
 .featured-grid {
     display: grid;
