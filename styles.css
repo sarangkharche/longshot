@@ -17,6 +17,7 @@
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
     --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'Geist Mono', 'Monaco', 'Courier New', monospace;
 }
 
 html {
@@ -376,6 +377,7 @@ a {
 .coffee-price {
     font-size: 1.25rem;
     font-weight: 500;
+    font-family: var(--font-mono);
 }
 
 /* Experience Section */
@@ -455,6 +457,7 @@ a {
     font-size: 1.25rem;
     font-weight: 500;
     color: var(--color-accent);
+    font-family: var(--font-mono);
 }
 
 /* Contact Section */
