@@ -161,11 +161,10 @@ a {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(10, 10, 11, 0.7) 0%, rgba(26, 26, 28, 0.6) 100%);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
     pointer-events: none;
 }
-
 
 .hero .hero-content {
     color: white;
@@ -181,39 +180,12 @@ a {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=2000&q=80');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.12;
-    filter: sepia(20%);
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 50%, rgba(23, 111, 74, 0.15), transparent 60%),
-                radial-gradient(circle at 70% 80%, rgba(35, 39, 146, 0.1), transparent 50%);
-    pointer-events: none;
-}
-
 .hero-content {
     text-align: center;
     position: relative;
     z-index: 1;
     max-width: 900px;
     padding: var(--spacing-md);
-    animation: fadeInUp 1s ease;
 }
 
 .hero-title {
@@ -307,11 +279,11 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 0.3s ease;
 }
 
 .grid-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .grid-overlay {
@@ -387,7 +359,7 @@ a {
 /* Coffee Collection */
 .coffee-collection {
     padding: var(--spacing-xl) 0;
-    background: linear-gradient(135deg, var(--color-dark) 0%, #2a2a2c 100%);
+    background: var(--color-dark);
     color: white;
 }
 
@@ -487,16 +459,16 @@ a {
 }
 
 .coffee-notes {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: var(--color-dark);
     background: var(--color-yellow);
     display: inline-block;
-    padding: 0.35rem 0.75rem;
+    padding: 0.25rem 0.6rem;
     border-radius: 100px;
     margin-bottom: var(--spacing-sm);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .coffee-description {
@@ -808,17 +780,6 @@ a {
 }
 
 /* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes scrollDown {
     0%, 100% {
         transform: translateY(0);
@@ -826,16 +787,6 @@ a {
     }
     50% {
         opacity: 1;
-    }
-}
-
-
-@keyframes pulseGlow {
-    0%, 100% {
-        box-shadow: 0 0 0 0 rgba(23, 111, 74, 0.4);
-    }
-    50% {
-        box-shadow: 0 0 0 8px rgba(23, 111, 74, 0);
     }
 }
 

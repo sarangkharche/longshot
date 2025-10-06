@@ -31,10 +31,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for fade-in animations
+// Simplified fade-in on scroll
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -46,40 +46,25 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Add fade-in animation to sections
-const fadeElements = document.querySelectorAll('.coffee-card, .menu-item, .about-text, .about-image, .experience-content');
+const fadeElements = document.querySelectorAll('.coffee-card, .about-text, .about-image');
 fadeElements.forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
 
 // Navbar scroll effect
-let lastScroll = 0;
 const nav = document.querySelector('.nav');
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
-        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.05)';
+    if (window.pageYOffset > 50) {
+        nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
     } else {
         nav.style.boxShadow = 'none';
     }
-
-    lastScroll = currentScroll;
 });
 
-// Parallax effect for hero section
-const hero = document.querySelector('.hero');
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallax = scrolled * 0.5;
-    if (hero) {
-        hero.style.transform = `translateY(${parallax}px)`;
-    }
-});
 
 // Image lazy loading optimization
 if ('loading' in HTMLImageElement.prototype) {
@@ -94,17 +79,6 @@ if ('loading' in HTMLImageElement.prototype) {
     document.body.appendChild(script);
 }
 
-// Add hover effect for grid items
-const gridItems = document.querySelectorAll('.grid-item');
-gridItems.forEach(item => {
-    item.addEventListener('mouseenter', function() {
-        this.style.zIndex = '10';
-    });
-
-    item.addEventListener('mouseleave', function() {
-        this.style.zIndex = '1';
-    });
-});
 
 // Scroll progress indicator (optional)
 const createScrollProgress = () => {
