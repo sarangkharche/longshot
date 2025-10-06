@@ -349,6 +349,10 @@ a {
     gap: var(--spacing-lg);
 }
 
+.coffee-grid-extended {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
 .coffee-card {
     background: white;
     transition: all 0.3s ease;
