@@ -1,3 +1,25 @@
+// Dynamic opening hours
+const openingHours = {
+    0: 'Closed', // Sunday
+    1: '7:30am - 3:30pm', // Monday
+    2: '7:30am - 3:30pm', // Tuesday
+    3: '7:30am - 3:30pm', // Wednesday
+    4: '7:30am - 3:30pm', // Thursday
+    5: '7:30am - 3:30pm', // Friday
+    6: '9:30am - 1pm'     // Saturday
+};
+
+const updateTodayHours = () => {
+    const today = new Date().getDay();
+    const hoursElement = document.getElementById('todayHours');
+    if (hoursElement) {
+        hoursElement.textContent = openingHours[today];
+    }
+};
+
+// Update hours on page load
+updateTodayHours();
+
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
