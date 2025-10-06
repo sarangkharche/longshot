@@ -8,13 +8,14 @@
 :root {
     --color-bg: #faf8f5;
     --color-cream: #f5f1eb;
-    --color-text: #2d2420;
+    --color-text: #1d1d1f;
     --color-text-secondary: #6b5d52;
-    --color-olive: #9fa157;
-    --color-navy: #2c4a6b;
-    --color-teal: #4a7c7e;
-    --color-accent: #d4955b;
-    --color-accent-dark: #b87a43;
+    --color-green: #176f4a;
+    --color-blue: #232792;
+    --color-yellow: #b4ad22;
+    --color-dark: #1d1d1f;
+    --color-accent: #176f4a;
+    --color-accent-dark: #0f5437;
     --color-border: #e8dfd5;
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -94,7 +95,7 @@ a {
 }
 
 .logo:hover {
-    color: var(--color-navy);
+    color: var(--color-green);
 }
 
 .nav-menu {
@@ -194,14 +195,14 @@ a {
 .btn-primary {
     display: inline-block;
     padding: 1rem 2.5rem;
-    background: var(--color-navy);
-    color: var(--color-bg);
+    background: var(--color-green);
+    color: white;
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    border: 2px solid var(--color-navy);
+    border: 2px solid var(--color-green);
     border-radius: 2px;
     position: relative;
     overflow: hidden;
@@ -214,7 +215,7 @@ a {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, var(--color-teal), var(--color-olive));
+    background: linear-gradient(90deg, var(--color-blue), var(--color-yellow));
     transition: left 0.4s ease;
     z-index: -1;
 }
@@ -224,9 +225,9 @@ a {
 }
 
 .btn-primary:hover {
-    border-color: var(--color-teal);
+    border-color: var(--color-blue);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(44, 74, 107, 0.3);
+    box-shadow: 0 4px 12px rgba(23, 111, 74, 0.3);
 }
 
 .scroll-indicator {
@@ -319,7 +320,7 @@ a {
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-navy);
+    color: var(--color-blue);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -426,10 +427,11 @@ a {
 
 .coffee-notes {
     font-size: 0.85rem;
-    color: var(--color-olive);
+    color: var(--color-yellow);
     margin-bottom: var(--spacing-sm);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    font-weight: 600;
 }
 
 .coffee-description {
@@ -515,15 +517,15 @@ a {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-navy), var(--color-teal), var(--color-olive));
+    background: linear-gradient(90deg, var(--color-green), var(--color-blue), var(--color-yellow));
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
 
 .menu-item:hover {
-    border-color: var(--color-teal);
+    border-color: var(--color-green);
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(74, 124, 126, 0.15);
+    box-shadow: 0 8px 20px rgba(23, 111, 74, 0.15);
 }
 
 .menu-item:hover::before {
@@ -544,7 +546,7 @@ a {
 .menu-item span {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--color-navy);
+    color: var(--color-green);
     font-family: var(--font-mono);
 }
 
@@ -566,7 +568,7 @@ a {
 }
 
 .testimonials .section-label {
-    color: var(--color-olive);
+    color: var(--color-yellow);
 }
 
 .testimonials h2 {
@@ -590,7 +592,7 @@ a {
 
 .testimonial-card:hover {
     background: rgba(250, 248, 245, 0.08);
-    border-color: var(--color-teal);
+    border-color: var(--color-green);
     transform: translateY(-4px);
 }
 
@@ -603,8 +605,8 @@ a {
 
 .testimonial-author {
     font-size: 0.9rem;
-    color: var(--color-olive);
-    font-weight: 500;
+    color: var(--color-yellow);
+    font-weight: 600;
 }
 
 /* Contact Section */
@@ -641,7 +643,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: var(--spacing-xs);
-    color: var(--color-olive);
+    color: var(--color-blue);
 }
 
 .contact-item p {
