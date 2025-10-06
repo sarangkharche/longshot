@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longshot - Specialty Coffee Roasters</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">LONGSHOT</a>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#coffee">Coffee</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Visit</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Crafted for the Discerning Palate</h1>
+            <p class="hero-subtitle">Single-origin beans, roasted to perfection</p>
+            <a href="#coffee" class="btn-primary">Explore Our Collection</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Featured Images Grid -->
+    <section class="featured-grid">
+        <div class="grid-item grid-large">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80" alt="Espresso shot being poured">
+            <div class="grid-overlay">
+                <h3>Precision Brewing</h3>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80" alt="Coffee beans close-up">
+            <div class="grid-overlay">
+                <h3>Premium Beans</h3>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80" alt="Latte art">
+            <div class="grid-overlay">
+                <h3>Artisan Craft</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-label">Our Story</span>
+                    <h2>A Pursuit of Excellence</h2>
+                    <p>At Longshot, we believe exceptional coffee is not a matter of chance—it's the result of meticulous sourcing, precise roasting, and unwavering dedication to craft.</p>
+                    <p>Our single-origin beans are sourced from the world's finest coffee-growing regions, selected for their distinctive flavor profiles and sustainable cultivation practices.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80" alt="Coffee roasting process">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Collection -->
+    <section id="coffee" class="coffee-collection">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Collection</span>
+                <h2>Signature Blends</h2>
+            </div>
+            <div class="coffee-grid">
+                <div class="coffee-card">
+                    <div class="coffee-image">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80" alt="Ethiopian coffee">
+                    </div>
+                    <div class="coffee-info">
+                        <h3>Ethiopian Yirgacheffe</h3>
+                        <p class="coffee-notes">Floral, Citrus, Tea-like</p>
+                        <p class="coffee-description">Delicate and complex with bright acidity and notes of bergamot and jasmine.</p>
+                        <span class="coffee-price">$24</span>
+                    </div>
+                </div>
+                <div class="coffee-card">
+                    <div class="coffee-image">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" alt="Colombian coffee">
+                    </div>
+                    <div class="coffee-info">
+                        <h3>Colombian Supremo</h3>
+                        <p class="coffee-notes">Caramel, Nuts, Chocolate</p>
+                        <p class="coffee-description">Rich and balanced with a smooth body and sweet caramel undertones.</p>
+                        <span class="coffee-price">$22</span>
+                    </div>
+                </div>
+                <div class="coffee-card">
+                    <div class="coffee-image">
+                        <img src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=600&q=80" alt="Sumatra coffee">
+                    </div>
+                    <div class="coffee-info">
+                        <h3>Sumatra Mandheling</h3>
+                        <p class="coffee-notes">Earthy, Herbal, Full-bodied</p>
+                        <p class="coffee-description">Bold and syrupy with low acidity and notes of cedar and dark chocolate.</p>
+                        <span class="coffee-price">$26</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="experience-image">
+            <img src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?w=1600&q=80" alt="Coffee shop interior">
+        </div>
+        <div class="experience-content">
+            <span class="section-label">The Experience</span>
+            <h2>Where Craft Meets Community</h2>
+            <p>Step into our thoughtfully designed space where every detail—from the hand-selected ceramics to the custom roasting equipment—reflects our commitment to excellence.</p>
+            <p>Join us for cupping sessions, brewing workshops, and intimate conversations about the art and science of specialty coffee.</p>
+        </div>
+    </section>
+
+    <!-- Menu Highlights -->
+    <section class="menu-highlight">
+        <div class="container">
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Espresso</h3>
+                    <p>Single or double shot</p>
+                    <span>$4 / $6</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Pour Over</h3>
+                    <p>Rotating single-origin</p>
+                    <span>$8</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Cappuccino</h3>
+                    <p>Traditional Italian style</p>
+                    <span>$7</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Cold Brew</h3>
+                    <p>24-hour steep</p>
+                    <span>$7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <span class="section-label">Visit Us</span>
+                    <h2>Find Your Perfect Brew</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>Location</h4>
+                            <p>123 Artisan Street<br>Brooklyn, NY 11211</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Hours</h4>
+                            <p>Monday - Friday: 7am - 7pm<br>Saturday - Sunday: 8am - 8pm</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Contact</h4>
+                            <p>hello@longshot.coffee<br>(555) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80" alt="Coffee shop location">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>LONGSHOT</h3>
+                    <p>Specialty Coffee Roasters</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Longshot Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
