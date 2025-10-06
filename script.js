@@ -20,7 +20,7 @@ const updateTodayHours = () => {
 // Update hours on page load
 updateTodayHours();
 
-// Force video autoplay and setup
+// Force video autoplay and setup - play as soon as possible
 const initVideo = () => {
     const heroVideo = document.querySelector('.hero-video');
     if (!heroVideo) return;
@@ -29,45 +29,54 @@ const initVideo = () => {
     heroVideo.controls = false;
     heroVideo.removeAttribute('controls');
     heroVideo.muted = true;
+    heroVideo.volume = 0;
     heroVideo.playbackRate = 0.5;
     heroVideo.defaultMuted = true;
     heroVideo.autoplay = true;
     heroVideo.playsInline = true;
 
-    // Try to play immediately
-    const attemptPlay = () => {
-        heroVideo.muted = true; // Ensure muted before each play attempt
-        const playPromise = heroVideo.play();
-
-        if (playPromise !== undefined) {
-            playPromise.then(() => {
-                // Success - ensure controls stay hidden
-                heroVideo.controls = false;
-            }).catch(() => {
-                // Autoplay blocked, try again with user interaction
-                heroVideo.controls = false;
-            });
-        }
-    };
-
-    // Try multiple times for better mobile compatibility
-    attemptPlay();
-    setTimeout(attemptPlay, 100);
-    setTimeout(attemptPlay, 500);
-
-    // And try on any user interaction as fallback
-    const playOnInteraction = () => {
-        heroVideo.controls = false;
+    // Force play immediately and repeatedly
+    const forcePlay = () => {
         heroVideo.muted = true;
+        heroVideo.volume = 0;
+        heroVideo.controls = false;
+
         heroVideo.play().then(() => {
             heroVideo.controls = false;
+        }).catch(() => {
+            heroVideo.controls = false;
         });
-        document.removeEventListener('scroll', playOnInteraction);
     };
 
-    document.addEventListener('touchstart', playOnInteraction, { once: true });
-    document.addEventListener('click', playOnInteraction, { once: true });
-    document.addEventListener('scroll', playOnInteraction, { once: true });
+    // Play as soon as video can play
+    heroVideo.addEventListener('loadedmetadata', forcePlay);
+    heroVideo.addEventListener('loadeddata', forcePlay);
+    heroVideo.addEventListener('canplay', forcePlay);
+    heroVideo.addEventListener('canplaythrough', forcePlay);
+
+    // Try immediately
+    forcePlay();
+
+    // Keep trying with increasing delays
+    setTimeout(forcePlay, 10);
+    setTimeout(forcePlay, 50);
+    setTimeout(forcePlay, 100);
+    setTimeout(forcePlay, 300);
+    setTimeout(forcePlay, 500);
+
+    // Play on any page interaction
+    const playOnce = () => {
+        forcePlay();
+        document.removeEventListener('touchstart', playOnce);
+        document.removeEventListener('touchend', playOnce);
+        document.removeEventListener('click', playOnce);
+        document.removeEventListener('scroll', playOnce);
+    };
+
+    document.addEventListener('touchstart', playOnce);
+    document.addEventListener('touchend', playOnce);
+    document.addEventListener('click', playOnce);
+    document.addEventListener('scroll', playOnce, { passive: true });
 };
 
 // Run on different load events for maximum compatibility
@@ -77,6 +86,34 @@ if (document.readyState === 'loading') {
     initVideo();
 }
 window.addEventListener('load', initVideo);
+
+// Handle tap overlay to play video and hide itself
+const initVideoTapOverlay = () => {
+    const tapOverlay = document.querySelector('.video-tap-overlay');
+    const heroVideo = document.querySelector('.hero-video');
+
+    if (!tapOverlay || !heroVideo) return;
+
+    // Hide overlay when video starts playing
+    heroVideo.addEventListener('playing', () => {
+        tapOverlay.style.opacity = '0';
+        setTimeout(() => {
+            tapOverlay.style.display = 'none';
+        }, 300);
+    });
+
+    // If video is already playing, hide overlay immediately
+    if (!heroVideo.paused) {
+        tapOverlay.style.display = 'none';
+    }
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initVideoTapOverlay);
+} else {
+    initVideoTapOverlay();
+}
+window.addEventListener('load', initVideoTapOverlay);
 
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');

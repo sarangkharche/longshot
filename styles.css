@@ -153,7 +153,6 @@ a {
     z-index: 0;
     opacity: 0;
     animation: fadeInVideo 1.5s ease-in forwards;
-    pointer-events: none;
     -webkit-appearance: none;
     appearance: none;
 }
@@ -194,11 +193,21 @@ a {
     to { opacity: 1; }
 }
 
+.video-tap-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: transparent;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.45);
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
 }
 
@@ -219,7 +228,7 @@ a {
 .hero-content {
     text-align: center;
     position: relative;
-    z-index: 1;
+    z-index: 3;
     max-width: 900px;
     padding: var(--spacing-md);
     display: flex;
