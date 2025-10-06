@@ -87,6 +87,21 @@ if (document.readyState === 'loading') {
 }
 window.addEventListener('load', initVideo);
 
+// Play on page refresh and when returning from cache
+window.addEventListener('pageshow', (event) => {
+    initVideo();
+    // If page was restored from cache, force video to play
+    if (event.persisted) {
+        const heroVideo = document.querySelector('.hero-video');
+        if (heroVideo) {
+            heroVideo.muted = true;
+            heroVideo.volume = 0;
+            heroVideo.controls = false;
+            heroVideo.play();
+        }
+    }
+});
+
 // Handle tap overlay to play video and hide itself
 const initVideoTapOverlay = () => {
     const tapOverlay = document.querySelector('.video-tap-overlay');
