@@ -3,7 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Longshot Coffee - Your Neighbourhood Coffee Shop</title>
+    <title>Longshot Coffee Wapping - Coffee Shop near Aldgate, Tower Hill | East London E1</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Independent coffee shop on Dock Street, Wapping. Specialty coffee near Aldgate East & Tower Hill stations. Open Mon-Fri 7:30am-3:30pm. Serving E1, Whitechapel, Tower Hamlets.">
+    <meta name="keywords" content="coffee Wapping, coffee near Aldgate, Aldgate East coffee, Tower Hill cafe, E1 coffee shop, Whitechapel coffee, East London cafe, specialty coffee Wapping, independent coffee shop London, Limini coffee, coffee near me E1">
+    <meta name="author" content="Longshot Coffee">
+    <meta name="robots" content="index, follow">
+
+    <!-- Geo Location Meta Tags -->
+    <meta name="geo.region" content="GB-LND">
+    <meta name="geo.placename" content="Wapping, London">
+    <meta name="geo.position" content="51.5082;-0.0603">
+    <meta name="ICBM" content="51.5082, -0.0603">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Longshot Coffee Wapping - Best Coffee near Aldgate & Tower Hill">
+    <meta property="og:description" content="Independent coffee shop on Dock Street, Wapping. Specialty coffee near Aldgate East & Tower Hill stations. Fresh Limini coffee daily.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://longshotcoffee.co.uk">
+    <meta property="og:image" content="https://longshotcoffee.co.uk/hero-video.mp4">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Longshot Coffee">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Longshot Coffee Wapping - Best Coffee near Aldgate">
+    <meta name="twitter:description" content="Independent coffee shop in Wapping serving specialty coffee near Aldgate East & Tower Hill stations.">
+    <meta name="twitter:image" content="https://longshotcoffee.co.uk/hero-video.mp4">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://longshotcoffee.co.uk">
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='sans-serif' font-weight='600'>L</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +42,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- Local Business Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Longshot Coffee",
+      "image": "https://longshotcoffee.co.uk/hero-video.mp4",
+      "@id": "https://longshotcoffee.co.uk",
+      "url": "https://longshotcoffee.co.uk",
+      "telephone": "",
+      "email": "longshotcoffee@live.com",
+      "priceRange": "££",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 Dock Street",
+        "addressLocality": "Wapping",
+        "addressRegion": "London",
+        "postalCode": "E1 8JN",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.5082,
+        "longitude": -0.0603
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:30",
+          "closes": "15:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:30",
+          "closes": "13:00"
+        }
+      ],
+      "servesCuisine": "Coffee",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Wapping"
+        },
+        {
+          "@type": "City",
+          "name": "Aldgate"
+        },
+        {
+          "@type": "City",
+          "name": "Tower Hill"
+        },
+        {
+          "@type": "City",
+          "name": "Whitechapel"
+        },
+        {
+          "@type": "City",
+          "name": "East London"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/long_shot_coffee/",
+        "https://maps.app.goo.gl/nNfpNg5z1ZgrFwoW6"
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -40,7 +140,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">Coffee That Hits Different</h1>
-            <p class="hero-subtitle">Your neighbourhood caffeine fix • Fresh daily • Actually good</p>
+            <p class="hero-subtitle">Your Wapping neighbourhood caffeine fix • Near Aldgate & Tower Hill • Fresh daily • Actually good</p>
             <div class="hero-hours">
                 <span class="hero-hours-label">Open Today</span>
                 <span class="hero-hours-time" id="todayHours">Loading...</span>
@@ -56,31 +156,31 @@
     <!-- Featured Images Grid -->
     <section class="featured-grid">
         <div class="grid-item grid-large">
-            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80" alt="Espresso shot being poured">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80" alt="Precision espresso brewing at Longshot Coffee Wapping">
             <div class="grid-overlay">
                 <h3>Precision Brewing</h3>
             </div>
         </div>
         <div class="grid-item">
-            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80" alt="Coffee cup and saucer">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80" alt="Handcrafted coffee at independent cafe in East London">
             <div class="grid-overlay">
                 <h3>Handcrafted</h3>
             </div>
         </div>
         <div class="grid-item">
-            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&q=80" alt="Coffee preparation">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&q=80" alt="Fresh coffee preparation daily in Aldgate">
             <div class="grid-overlay">
                 <h3>Fresh Daily</h3>
             </div>
         </div>
         <div class="grid-item">
-            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80" alt="Coffee beans close-up">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80" alt="Premium coffee beans at Wapping coffee shop">
             <div class="grid-overlay">
                 <h3>Premium Beans</h3>
             </div>
         </div>
         <div class="grid-item">
-            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80" alt="Latte art">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80" alt="Artisan latte art at East London cafe">
             <div class="grid-overlay">
                 <h3>Artisan Craft</h3>
             </div>
@@ -93,12 +193,12 @@
             <div class="about-content">
                 <div class="about-text">
                     <span class="section-label">Our Story</span>
-                    <h2>Your neighbourhood coffee shop</h2>
-                    <p>We're a small, independent coffee shop right here in your community. Started by locals, for locals.</p>
-                    <p>Every morning, we brew fresh coffee from our friends at Limini Coffee. We know your name, remember your order, and genuinely look forward to seeing you. Come grab a coffee, have a chat, and feel right at home.</p>
+                    <h2>Your neighbourhood coffee shop in Wapping</h2>
+                    <p>We're a small, independent coffee shop right here in Wapping, serving the Aldgate and East London community. Started by locals, for locals.</p>
+                    <p>Every morning, we brew fresh coffee from our friends at Limini Coffee. Whether you're from Aldgate East, Tower Hill, or Whitechapel, we know your name, remember your order, and genuinely look forward to seeing you. Come grab a coffee, have a chat, and feel right at home.</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80" alt="Coffee roasting process">
+                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80" alt="Specialty coffee roasting for Wapping and East London">
                 </div>
             </div>
         </div>
@@ -115,7 +215,7 @@
             <div class="coffee-grid coffee-grid-extended">
                 <div class="coffee-card">
                     <div class="coffee-image">
-                        <img src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?w=600&q=80" alt="Ethiopia Yirgacheffe">
+                        <img src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?w=600&q=80" alt="Ethiopia Yirgacheffe coffee beans at Longshot Coffee Wapping">
                     </div>
                     <div class="coffee-info">
                         <h3>Ethiopia Yirgacheffe</h3>
@@ -125,7 +225,7 @@
                 </div>
                 <div class="coffee-card">
                     <div class="coffee-image">
-                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80" alt="Colombia">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80" alt="Colombian coffee at specialty cafe in Aldgate">
                     </div>
                     <div class="coffee-info">
                         <h3>Colombia</h3>
@@ -135,7 +235,7 @@
                 </div>
                 <div class="coffee-card">
                     <div class="coffee-image">
-                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80" alt="Limini Blend">
+                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80" alt="Limini Blend specialty coffee in East London">
                     </div>
                     <div class="coffee-info">
                         <h3>Limini Blend</h3>
@@ -145,7 +245,7 @@
                 </div>
                 <div class="coffee-card">
                     <div class="coffee-image">
-                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&q=80" alt="Brazil">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&q=80" alt="Brazilian coffee beans at Tower Hill coffee shop">
                     </div>
                     <div class="coffee-info">
                         <h3>Brazil</h3>
@@ -155,7 +255,7 @@
                 </div>
                 <div class="coffee-card">
                     <div class="coffee-image">
-                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" alt="Guatemala">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" alt="Guatemala coffee at independent cafe Wapping">
                     </div>
                     <div class="coffee-info">
                         <h3>Guatemala</h3>
@@ -170,7 +270,7 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="experience-image">
-            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=1600&q=80" alt="Coffee brewing process">
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=1600&q=80" alt="Coffee brewing experience at community cafe in Wapping East London">
         </div>
         <div class="experience-content">
             <span class="section-label">The Experience</span>
@@ -365,9 +465,10 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>LONGSHOT COFFEE</h3>
-                    <p>1 Dock St, London E1 8JN</p>
+                    <p>1 Dock St, Wapping, London E1 8JN</p>
                     <p>Mon-Fri: 7:30am-3:30pm • Sat: 9:30am-1pm</p>
                     <p>longshotcoffee@live.com</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">Proudly serving Wapping, Aldgate, Tower Hill, Whitechapel & East London</p>
                 </div>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/long_shot_coffee/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
