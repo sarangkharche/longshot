@@ -877,6 +877,16 @@ a {
     font-size: 0.85rem;
 }
 
+.footer-bottom a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    opacity: 0.6;
+}
+
 /* Animations */
 @keyframes scrollDown {
     0%, 100% {
